@@ -89,6 +89,7 @@ ejercicio4b <- insurance %>%
 #10) Teniendo en cuenta la base insurance. ¿Cuál es la probabilidad 
 #de seleccionar al azar a un asegurado que se hombre y mujer? ¿Cómo
 # son estos eventos?
+#la probabilidad es cero por que es imposible que sea hombre y mujer a la vez
 
 #11) Confeccionar una tabla de contingencia por género 
 #y por región y determinar cuál es la probabilidad
