@@ -34,3 +34,20 @@ modelo1 <- lm(Ozone ~ Solar.R + Wind, calidadaire)
 tidy(modelo1)
 
 valores1 <- data.frame(Solar.R = 22,Wind = 12.2)
+
+#15/10/2024
+
+datos_personas <- read.csv("datos_personas.csv")
+head(datos_personas)
+
+datos_personas <- datos_personas %>%
+  mutate(Sexo_dummy = case_when( #la nueva columna o variable se llamará Sexo_dummy
+    Sexo == "Hombre" ~ 1, #cuando Sexo tome el valor hombre se reemplazará por 1
+    Sexo == "Mujer" ~ 0 #cuando Sexo tome el valor mujer se reemplazará por 0
+  ))
+
+modelo <- lm(Peso ~ Altura + Sexo_dummy, data = datos_personas)
+tidy(modelo)
+
+modelo <- lm(Peso ~ Altura + Ancho + Altura * Ancho, data = datos_personas)
+tidy(modelo)
