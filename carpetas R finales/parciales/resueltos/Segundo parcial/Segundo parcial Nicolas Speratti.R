@@ -141,27 +141,27 @@ corrplot(matriz_cor,
          col = colorRampPalette(c("orange", "white", "green"))(200),# Colores 
          mar = c(0,0,2,0))  #Ajuste de márgenes
 
-#entre mag y stations hay una correlacion muy positiva, pero ninguna de las dos posee correlacion fuerte o debil con depth
+#entre mag y stations hay una correlacion muy positiva, pero ninguna de las dos posee correlacion muy fuerte o muy debil con depth
 
 modelo1 <- lm(depth ~ stations, data = quakes)
-resumen <- tidy(modelo1)
-resumen
-sum_mod <- summary(modelo1)
-R_cuad1 <- sum_mod$r.squared
+resumen1 <- tidy(modelo1)
+resumen1
+sum_mod1 <- summary(modelo1)
+R_cuad1 <- sum_mod1$r.squared
 R_cuad1
 
 modelo2 <- lm(depth ~ mag, data = quakes)
-resumen <- tidy(modelo2)
+resumen2 <- tidy(modelo2)
 resumen
-sum_mod <- summary(modelo2)
-R_cuad2 <- sum_mod$r.squared
+sum_mod2 <- summary(modelo2)
+R_cuad2 <- sum_mod2$r.squared
 R_cuad2
 
 modelo3 <- lm(depth ~ mag + stations, data = quakes)
-resumen <- tidy(modelo3)
-resumen
-sum_mod <- summary(modelo3)
-R_cuad3 <- sum_mod$r.squared
+resumen3 <- tidy(modelo3)
+resumen3
+sum_mod3 <- summary(modelo3)
+R_cuad3 <- sum_mod3$r.squared
 R_cuad3
 
-#ninguno de los coeficientes son buenos, por lo que ninguno de los modelso son muy buenos
+#ninguno de los coeficientes son buenos, por lo que ninguno de los modelos son muy buenos, a pesar de que tengan muy buenos p.values
