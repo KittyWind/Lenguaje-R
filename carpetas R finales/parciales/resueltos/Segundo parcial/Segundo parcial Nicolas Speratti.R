@@ -31,7 +31,7 @@ magdist
 stationdist <- ggplot(quakes, aes(sample = stations)) + geom_qq() + geom_qq_line() +
   geom_hline(yintercept = 8) + geom_vline(xintercept = 0)
 stationdist
-#ninguna de las variables continuas se distribuye completamente de manera normal,pero algunas se distribuyen mejor que otras, debido a que tienen una recta mas uniforme
+#ninguna de las variables continuas se distribuye completamente de manera normal,pero algunas se distribuyen mejor que otras, debido a que tienen un grafico mas uniforme, pero ninguna sigue fielmente a la recta
 
 #ej 2
 meantotal <- mean(quakes$depth)
