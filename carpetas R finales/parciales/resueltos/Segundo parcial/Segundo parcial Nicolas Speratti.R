@@ -121,7 +121,7 @@ intconfianza  <- ggplot(resultados, aes(x = (Limite_Superior + Limite_Inferior)/
                 labs(title = "Intervalos de Confianza de nivel 90%", x = "Medias", y = "Muestra") +
                 theme_minimal() + theme(legend.position = "top")
 intconfianza 
-#es un buen intervalo de confianza ya que la mayoria de las lineas estan en verde
+#el intervalo de confianza coincide con los resultados por que solo hay 7 lineas rojas
 
 #ej4
 
